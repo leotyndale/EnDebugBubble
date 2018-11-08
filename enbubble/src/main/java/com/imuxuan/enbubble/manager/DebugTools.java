@@ -27,20 +27,20 @@ import java.util.ArrayList;
 
 
 /**
- * @ClassName DebugToolsManager
+ * @ClassName DebugTools
  * @Description 悬浮窗管理器
  * @Author Yunpeng Li
  * @Creation 2018/3/15 下午5:05
  * @Mender Yunpeng Li
  * @Modification 2018/3/15 下午5:05
  */
-public class DebugToolsManager implements IDebugToolsManager {
+public class DebugTools implements IDebugToolsManager {
 
     private MagnetView mEnFloatingView;
     private DebugToolsTrashLayout mTrashView;
     private DebugToolsCoordinator mLayoutCoordinator;
 
-    private static volatile DebugToolsManager mInstance;
+    private static volatile DebugTools mInstance;
     private FrameLayout mContainer;
     private TextView mMemoryInfo;
     private DebugViewManager mDebugConfig;
@@ -48,14 +48,14 @@ public class DebugToolsManager implements IDebugToolsManager {
 
     private SparseArray<ArrayList<SimpleEntity>> menuEntities;
 
-    private DebugToolsManager() {
+    private DebugTools() {
     }
 
-    public static IDebugToolsManager getInstance() {
+    public static IDebugToolsManager get() {
         if (mInstance == null) {
-            synchronized (DebugToolsManager.class) {
+            synchronized (DebugTools.class) {
                 if (mInstance == null) {
-                    mInstance = new DebugToolsManager();
+                    mInstance = new DebugTools();
                 }
             }
         }
@@ -63,13 +63,13 @@ public class DebugToolsManager implements IDebugToolsManager {
     }
 
     @Override
-    public DebugToolsManager fillMenuData(SparseArray<ArrayList<SimpleEntity>> menuEntities) {
+    public DebugTools fillMenuData(SparseArray<ArrayList<SimpleEntity>> menuEntities) {
         this.menuEntities = menuEntities;
         return this;
     }
 
     @Override
-    public DebugToolsManager remove() {
+    public DebugTools remove() {
         new Handler(Looper.getMainLooper()).post(new Runnable() {
             @Override
             public void run() {
@@ -143,7 +143,7 @@ public class DebugToolsManager implements IDebugToolsManager {
     }
 
     @Override
-    public DebugToolsManager add() {
+    public DebugTools add() {
         ensureView(BubbleContext.getAppContext());
         return this;
     }
@@ -155,7 +155,7 @@ public class DebugToolsManager implements IDebugToolsManager {
     }
 
     @Override
-    public DebugToolsManager attach(FrameLayout container) {
+    public DebugTools attach(FrameLayout container) {
         if (container == null || mEnFloatingView == null) {
             mContainer = container;
             return null;
@@ -180,13 +180,13 @@ public class DebugToolsManager implements IDebugToolsManager {
     }
 
     @Override
-    public DebugToolsManager detach(Activity activity) {
+    public DebugTools detach(Activity activity) {
         detach(getActivityRoot(activity));
         return this;
     }
 
     @Override
-    public DebugToolsManager detach(FrameLayout container) {
+    public DebugTools detach(FrameLayout container) {
         if (mEnFloatingView != null && container != null && ViewCompat.isAttachedToWindow(mEnFloatingView)) {
             container.removeView(mEnFloatingView);
             container.removeView(mTrashView);
@@ -245,7 +245,7 @@ public class DebugToolsManager implements IDebugToolsManager {
     }
 
     @Override
-    public DebugToolsManager updateInfo(final CharSequence text, final float percent) {
+    public DebugTools updateInfo(final CharSequence text, final float percent) {
         new Handler(Looper.getMainLooper()).post(new Runnable() {
             @Override
             public void run() {

@@ -14,21 +14,21 @@ import java.util.ArrayList;
 
 public interface IDebugToolsManager {
 
-    DebugToolsManager fillMenuData(SparseArray<ArrayList<SimpleEntity>> menuEntities);
+    DebugTools fillMenuData(SparseArray<ArrayList<SimpleEntity>> menuEntities);
 
-    DebugToolsManager remove();
+    DebugTools remove();
 
-    DebugToolsManager add();
+    DebugTools add();
 
     IDebugToolsManager attach(Activity activity);
 
-    DebugToolsManager attach(FrameLayout container);
+    DebugTools attach(FrameLayout container);
 
-    DebugToolsManager detach(Activity activity);
+    DebugTools detach(Activity activity);
 
-    DebugToolsManager detach(FrameLayout container);
+    DebugTools detach(FrameLayout container);
 
-    DebugToolsManager updateInfo(CharSequence text, float percent);
+    DebugTools updateInfo(CharSequence text, float percent);
 
     boolean isMemoryInfoShow();
 

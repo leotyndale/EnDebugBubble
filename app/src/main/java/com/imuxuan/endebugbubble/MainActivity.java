@@ -3,7 +3,7 @@ package com.imuxuan.endebugbubble;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.imuxuan.enbubble.manager.DebugToolsManager;
+import com.imuxuan.enbubble.manager.DebugTools;
 import com.imuxuan.endebugbubble.config.DebugConfig;
 
 public class MainActivity extends AppCompatActivity {
@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        DebugToolsManager.getInstance().attach(this)
+        DebugTools.get().attach(this)
                 .fillMenuData(DebugConfig.getList())
                 .add();
     }
@@ -21,18 +21,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        DebugToolsManager.getInstance().attach(this);
+        DebugTools.get().attach(this);
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        DebugToolsManager.getInstance().detach(this);
+        DebugTools.get().detach(this);
     }
 
     @Override
     public void onBackPressed() {
-        if (!DebugToolsManager.getInstance().dismissMenu()){
+        if (!DebugTools.get().dismissMenu()){
             super.onBackPressed();
         }
     }

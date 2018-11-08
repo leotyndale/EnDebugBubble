@@ -26,7 +26,7 @@ package com.imuxuan.enbubble.view;
 
 import android.view.View;
 
-import com.imuxuan.enbubble.manager.DebugToolsManager;
+import com.imuxuan.enbubble.manager.DebugTools;
 
 
 public final class DebugToolsCoordinator {
@@ -99,7 +99,7 @@ public final class DebugToolsCoordinator {
             return;
         }
         if (isOverTrash(bubble)) {
-            DebugToolsManager.getInstance().remove();
+            DebugTools.get().remove();
         }
         trashView.setVisibility(View.GONE);
     }

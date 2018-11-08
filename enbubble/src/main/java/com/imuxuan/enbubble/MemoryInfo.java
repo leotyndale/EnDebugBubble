@@ -5,7 +5,7 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Message;
 
-import com.imuxuan.enbubble.manager.DebugToolsManager;
+import com.imuxuan.enbubble.manager.DebugTools;
 
 import java.text.DecimalFormat;
 
@@ -50,7 +50,7 @@ public class MemoryInfo {
     }
 
     private void checkMemory() {
-        if (!DebugToolsManager.getInstance().isMemoryInfoShow()) {
+        if (!DebugTools.get().isMemoryInfoShow()) {
             return;
         }
         Debug.MemoryInfo memoryInfo = new Debug.MemoryInfo();
@@ -69,6 +69,6 @@ public class MemoryInfo {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        DebugToolsManager.getInstance().updateInfo(memorySize, percent);
+        DebugTools.get().updateInfo(memorySize, percent);
     }
 }
