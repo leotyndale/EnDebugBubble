@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.imuxuan.enbubble.view.wave.WaterView
+        android:id="@+id/waterview"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_wave_water_bg"
+        app:waterview_amplitude="30"
+        app:waterview_isShowFrame="false"
+        app:waterview_offset_increment_value="0.4"
+        app:waterview_paint_color_first="#FFCCCC"
+        app:waterview_paint_color_second="#FF9999"
+        app:waterview_sleep_time="150"
+        app:waterview_up_velocity="10" />
+
+    <TextView
+        android:id="@+id/memory_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="#ecffc1"
+        android:text="34.16M"
+        android:textSize="13sp" />
+</RelativeLayout>

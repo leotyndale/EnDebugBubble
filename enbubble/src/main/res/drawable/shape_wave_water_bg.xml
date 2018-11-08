@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <!--angle 渐变角度,0:左到右;90:下到上;180:右到左;270:上到下-->
+    <size android:width= "208dp"
+        android:height= "208dp" />
+    <gradient
+        android:startColor="#DD0000"
+        android:endColor="#FF8888"
+        android:angle="90"></gradient>
+</shape>

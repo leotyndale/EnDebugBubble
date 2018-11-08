@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="debug_filepath_type">#333333</color>
+    <color name="debug_filepath_name">#FFFFFF</color>
+
+    <color name="white">#ffffff</color>
+    <color name="brand_red">#d51826</color>
+
+    <color name="indicator_normal">#fff0f0f0</color>
+
+    <color name="indicator_select">#969696</color>
+    <color name="theme_gray">#F5F5F5</color>
+    <color name="slider_color_normal">#ffa6a6a6</color>
+    <color name="slider_color">#ff969696</color>
+</resources>
