@@ -4,6 +4,8 @@ EnDebugBubble
 ==========================
 [![Muxuan](https://img.shields.io/badge/Powered_by-Muxuan-green.svg?style=flat)](http://www.imuxuan.com/)
 
+[English](/README_EN.md)
+
 一个良好的Debug工具入口，是每个app所必备的，对于凌乱的调试工具整理和调试功能的统一使用方法，需要一个外观整洁，内部具体的显示容器。
 
 ### 传统方案
