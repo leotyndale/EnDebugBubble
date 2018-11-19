@@ -4,44 +4,42 @@ EnDebugBubble
 ==========================
 [![Muxuan](https://img.shields.io/badge/Powered_by-Muxuan-green.svg?style=flat)](http://www.imuxuan.com/)
 
-[English](/README_EN.md)
+A good Debug tool entry is a must for every app. For the unified use of messy debugging tools and debugging features, you need a neat, internal display container.
 
-一个良好的Debug工具入口，是每个app所必备的，对于凌乱的调试工具整理和调试功能的统一使用方法，需要一个外观整洁，内部具体的显示容器。
+### Traditional scheme
 
-### 传统方案
+##### Scenario 1: The general debugging tool provides a unified debugging interface by adding an entry at a certain point on the main interface of the application.
 
-##### 方案一：一般的调试工具，借助在应用主界面某一处增加入口的方式，提供统一调试界面
+- The entrance is fixed. Entering the deep interface, calling the Debug tool must be returned to the Debug fixed entrance.
+- There is a need for UI debugging, and debugging tools are not flexible enough
 
-- 入口固定，进入深层次界面调用Debug工具必须退回Debug固定入口处
-- 出现UI调试等需求，调试工具不够灵活
+##### Scenario 2: Traditional floating window implementation debugging entry
 
-##### 方案二：传统悬浮窗实现调试入口
+- The floating window faces the permission problem
+- The function of the general floating window is too single
+- Floating on the app affects the overall experience
 
-- 悬浮窗面临权限问题
-- 一般悬浮窗的功能过于单一
-- 浮在应用上影响整体使用体验
+### Features
 
-### 功能
+This tool only provides a floating window style debugging tool interface practice, users can fill in the debugging test function to use.
 
-此工具只提供一个悬浮窗样式的调试工具界面的实践，使用者可以自行填充调试测试功能进行使用。
+- In-app display, no need to apply for any permissions;
+- Support for drag and drop;
+- Move beyond the screen limit;
+- Automatically snap to the edge of the screen;
+- Destroy the floating window flexibly;
+- Real-time display of information such as memory usage;
+- Click on the floating window to pop up the floating layer for function setting;
+- The height of the floating layer can be flexibly adjusted;
+- Debugging the floating layer can add multiple pages;
+- Provide a variety of display controls, such as radio controls, multi-select controls, rich multi-select information controls, text controls, etc.
+- Filling test function is convenient and convenient for maintenance;
+- APP can be called out at any location, and the APP is automatically hidden outside;
+- Chained calls, simple to call.
 
-- 应用内显示，无需申请任何权限；
-- 支持拖拽；
-- 超出屏幕限制移动；
-- 可自动吸附到屏幕边缘；
-- 销毁悬浮窗灵活；
-- 可实时显示内存占用等信息；
-- 点击悬浮窗可弹出浮层进行功能设定；
-- 浮层高度可灵活调整；
-- 调试浮层可增加多页；
-- 提供多种显示控件，如单选控件、多选控件、富多选信息控件、文字控件等
-- 填充测试功能方便，利于维护；
-- APP任意位置灵活唤出，APP外部自动隐藏；
-- 链式调用，调用简单。
+### Usage rules
 
-### 使用规则
-
-1. 在基类Activity（注意必须是基类Activity）中的onStart和onStop添加如下代码
+1. Add the following code to onStart and onStop in the base class Activity (note that it must be the base class Activity)
 
 ```java
    @Override
@@ -58,21 +56,21 @@ EnDebugBubble
 ```
 
 
-2. 显示Debug工具
+2. Display the Debug tool
 
 ```java
    DebugTools.get().add();
 ```
 
-### 增强设置
+### Other settings
 
-销毁Debug工具
+Dismiss
 
 ```java
    DebugTools.get().remove();
 ```
 
-拦截返回键销毁菜单
+onBackPressed
 
 ```java
     @Override
@@ -83,7 +81,7 @@ EnDebugBubble
     }
 ```
 
-填充数据并显示（在onCreate中提前显示需要主动调用一次attach）
+Fill data and display (in advance in onCreate, you need to call the attach once)
 
 ```java
     @Override
@@ -97,17 +95,17 @@ EnDebugBubble
     }
 ```
 
-更新悬浮窗显示信息
+Update floating window display information
 
 ```java
     DebugTools.get().updateInfo(memorySize, percent);
 ```
 
-### 数据填充
+### Fill Data
 
-支持四种类型控件填充列表
+Support for four types of control fill lists
 
-1.单选控件
+1.Radio
 
 ```java
     new RadioEntity().setGroupBtnName("接口类型1#接口类型2#接口类型3")
@@ -117,7 +115,7 @@ EnDebugBubble
 
 ![Logo](https://raw.githubusercontent.com/leotyndale/EnDebugBubble/03e3341926c2c550502b6b60ff589cbf002b45ab/sc/2.2.jpg)
 
-2.开关控件
+2.Switch
 
 ```java
     new SwitchEntity().setChecked(true)
@@ -135,13 +133,13 @@ EnDebugBubble
 
 ![Logo](https://raw.githubusercontent.com/leotyndale/EnDebugBubble/03e3341926c2c550502b6b60ff589cbf002b45ab/sc/2.4.jpg)
 
-3.标题控件
+3.Title
 
 ```java
     new TextEntity().setTitle("测试页面");
 ```
 
-4.普通控件
+4.Simple
 
 ```java
     new SimpleEntity().setTitle("测试1")
@@ -155,13 +153,13 @@ EnDebugBubble
 
 ![Logo](https://raw.githubusercontent.com/leotyndale/EnDebugBubble/03e3341926c2c550502b6b60ff589cbf002b45ab/sc/2.1.jpg)
 
-### 效果图
+### Preview
 
 ![Logo](https://raw.githubusercontent.com/leotyndale/EnDebugBubble/03e3341926c2c550502b6b60ff589cbf002b45ab/sc/1.gif)
 
-### 特别鸣谢
+### Special thanks
 
-本开源库借鉴多个开源库，感谢以下开源库为开源力量做出的贡献：
+This open source library draws on several open source libraries, thanks to the following open source libraries for the contribution of open source power:
 
 https://github.com/zzz40500/AndroidSweetSheet
 
