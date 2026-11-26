@@ -175,3 +175,15 @@ https://github.com/leotyndale/EnFloatingView
 
 https://github.com/gyw520gyw/GroupButtonView
 
+---
+
+### 更多开源项目（More Open-Source Projects）
+
+| 项目 | 简介 | Stars |
+| --- | --- | --- |
+| [**mobile-agent-skills**](https://github.com/leotyndale/mobile-agent-skills) | 面向 Claude Code / Cursor / Codex / Antigravity / Gemini CLI 的移动端 AI 技能库 | ![Stars](https://img.shields.io/github/stars/leotyndale/mobile-agent-skills?style=flat-square&color=f59e0b) |
+| [**EnFloatingView**](https://github.com/leotyndale/EnFloatingView) | 无需一切权限的应用内悬浮窗，全 ROM 兼容（含 Jetpack Compose 混编） | ![Stars](https://img.shields.io/github/stars/leotyndale/EnFloatingView?style=flat-square&color=f59e0b) |
+| [**AppArchitecture**](https://github.com/leotyndale/AppArchitecture) | 2026 移动端架构工程实践指南与《移动开发架构设计实战》随书源码 | ![Stars](https://img.shields.io/github/stars/leotyndale/AppArchitecture?style=flat-square&color=f59e0b) |
+| [**EnCrashWhiteList**](https://github.com/leotyndale/EnCrashWhiteList) | 根治 ROM 崩溃问题，Android Crash 白名单异常处理方案 | ![Stars](https://img.shields.io/github/stars/leotyndale/EnCrashWhiteList?style=flat-square&color=f59e0b) |
+
+
