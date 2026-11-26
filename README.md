@@ -1,8 +1,10 @@
-![Logo](https://raw.githubusercontent.com/leotyndale/EnFloatingView/master/preview/logo.png)
+[![Logo](https://raw.githubusercontent.com/leotyndale/EnFloatingView/master/preview/logo.png)](https://imuxuan.com/)
 
 EnDebugBubble
 ==========================
-[![Muxuan](https://img.shields.io/badge/Powered_by-Muxuan-green.svg?style=flat)](http://www.imuxuan.com/)
+[![Stars](https://img.shields.io/github/stars/leotyndale/EnDebugBubble?style=flat-square&color=f59e0b)](https://github.com/leotyndale/EnDebugBubble/stargazers)
+[![Website](https://img.shields.io/badge/Website-imuxuan.com-10b981?style=flat-square)](https://imuxuan.com/)
+[![Blog](https://img.shields.io/badge/Blog-ForDeer-0ea5e9?style=flat-square)](https://blog.imuxuan.com/)
 
 [English](/README_EN.md)
 
